@@ -4,7 +4,7 @@ This small project demonstrates **procedural island generation** in **Unreal Eng
 
 The project is written entirely in **C++** and uses a custom `AIslandConstructor` actor to generate and render the island geometry. You can place one of these actors in your level, set some properties (e.g., island size, number of islands, tessellation level, etc.), and then watch it create custom terrain shapes.
 
-![Screenshot of my project](images/Island1.png "My Project Screenshot")
+![Screenshot of my project](images/Island1.PNG "My Project Screenshot")
 
 ---
 
