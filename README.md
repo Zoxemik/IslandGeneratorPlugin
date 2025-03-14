@@ -41,14 +41,8 @@ If you want to explore or adapt this procedural island code in your own project,
    - Adjust the **voxel “solidify”** resolution (`IslandGridResolution`) and **PN tessellation** level (`IslandTessellationLevel`) for performance vs. visual fidelity.
 
 ![DetailsPanel](images/DetailsPanel.PNG "Details Panel")
-
-4. **Add **`NavMeshBoundsVolume`** to your editor**
-   - Set Brush Settings so that **NavMesh** covers the entire island and is at the correct height.
-   - Run the game
-
-![BrushSettings](images/BrushSettings.PNG "Brush Settings")
       
-. **Regenerate**  
+4. **Regenerate**  
    - Whenever you re-compile, or if you add an in-editor function call, the mesh can be regenerated to reflect your new parameters.
    - If you’re using a **random seed**, the resulting islands will be consistent for the same seed but different across different seeds.
 
@@ -73,3 +67,11 @@ For more advanced usage, explore these headers:
 #include "GeometryScript/MeshDeformFunctions.h"
 #include "GeometryScript/MeshVoxelFunctions.h"
 #include "GeometryScript/MeshUVFunctions.h"
+```
+## Extra if you planning to use pre made spawner
+
+4. **Add **`NavMeshBoundsVolume`** to your editor**
+   - Set Brush Settings so that **NavMesh** covers the entire island and is at the correct height.
+   - Run the game
+
+![BrushSettings](images/BrushSettings.PNG "Brush Settings")
