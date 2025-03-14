@@ -46,6 +46,36 @@ If you want to explore or adapt this procedural island code in your own project,
    - Whenever you re-compile, or if you add an in-editor function call, the mesh can be regenerated to reflect your new parameters.
    - If you’re using a **random seed**, the resulting islands will be consistent for the same seed but different across different seeds.
 
+5. **Add your own **`GameInstance`**
+   -Inherit from **`IIslandPluginInterface`** in your **`UGameInstance`** class.
+```cpp
+
+UCLASS()
+class UYourGameInstance : public UGameInstance, public IIslandPluginInterface
+{
+	GENERATED_BODY()
+	
+public:
+	virtual void Init() override;
+
+	virtual FRandomStream IslandSeed_Implementation() const override;
+	
+private:
+	int32 RandomSeed;
+};
+```
+
+```cpp
+void URTSGameInstance::Init()
+{
+	RandomSeed = UKismetMathLibrary::RandomInteger(2147483646);
+}
+
+FRandomStream URTSGameInstance::IslandSeed_Implementation() const
+{
+	return FRandomStream(RandomSeed);
+}
+```
 ---
 
 ## Geometry Script Highlights
