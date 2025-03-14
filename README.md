@@ -33,7 +33,7 @@ If you want to explore or adapt this procedural island code in your own project,
    - Enable the **IslandGenerator** plugin in your project’s settings.
 
 2. **Look at the Actor Class**  
-   - Start with [`IslandConstructor.h`](IslandConstructor.h) and [`IslandConstructor.cpp`](IslandConstructor.cpp).
+   - Start with [`IslandConstructor.h`](IslandConstructor.h) and [`IslandGenerator/Source/IslandGenerator/Private/IslandConstructor.cpp`](IslandConstructor.cpp).
    - The class `AIslandConstructor` extends `ADynamicMeshActor`. When placed in a level, it runs various Geometry Script functions to construct and shape the island mesh on the fly.
 
 3. **Set Properties in the Details Panel**  
