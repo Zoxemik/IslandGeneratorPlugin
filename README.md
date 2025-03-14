@@ -6,6 +6,8 @@ The project is written entirely in **C++** and uses a custom `AIslandConstructor
 
 ![Screenshot of my project](images/Island1.PNG "My Project Screenshot")
 
+![Screenshot of my project](images/Island2.PNG "My Project Screenshot")
+
 ---
 
 ## About the Project
@@ -101,7 +103,7 @@ For more advanced usage, explore these headers:
 #include "GeometryScript/MeshVoxelFunctions.h"
 #include "GeometryScript/MeshUVFunctions.h"
 ```
-## Extra if you planning to use pre made spawner
+## Additionally, some information about the spawner
 
 4. **Add **`NavMeshBoundsVolume`** to your editor**
    - Set Brush Settings so that **NavMesh** covers the entire island and is at the correct height.
