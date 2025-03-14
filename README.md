@@ -46,8 +46,9 @@ If you want to explore or adapt this procedural island code in your own project,
    - Whenever you re-compile, or if you add an in-editor function call, the mesh can be regenerated to reflect your new parameters.
    - If you’re using a **random seed**, the resulting islands will be consistent for the same seed but different across different seeds.
 
-5. **Add your own **`GameInstance`** **
-   -Inherit from **`IIslandPluginInterface`** in your **`UGameInstance`** class.
+5. **Add your own **`GameInstance`**** 
+   - Inherit from **`IIslandPluginInterface`** in your **`UGameInstance`** class.
+   
 ```cpp
 
 UCLASS()
