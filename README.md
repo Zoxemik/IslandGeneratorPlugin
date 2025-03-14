@@ -33,7 +33,7 @@ If you want to explore or adapt this procedural island code in your own project,
    - Enable the **IslandGenerator** plugin in your project’s settings.
 
 2. **Look at the Actor Class**  
-   - Start with [`IslandConstructor.h`](IslandConstructor.h) and [`IslandConstructor.cpp`](IslandGenerator/Source/IslandGenerator/Private/IslandConstructor.cpp).
+   - Start with [`IslandConstructor.h`](IslandGenerator/Source/IslandGenerator/Private/IslandConstructor.h) and [`IslandConstructor.cpp`](IslandGenerator/Source/IslandGenerator/Private/IslandConstructor.cpp).
    - The class `AIslandConstructor` extends `ADynamicMeshActor`. When placed in a level, it runs various Geometry Script functions to construct and shape the island mesh on the fly.
 
 3. **Set Properties in the Details Panel**  
@@ -42,7 +42,13 @@ If you want to explore or adapt this procedural island code in your own project,
 
 ![DetailsPanel](images/DetailsPanel.PNG "Details Panel")
 
-4. **Regenerate**  
+4. **Add **`NavMeshBoundsVolume`** to your editor**
+   - Set Brush Settings so that **NavMesh** covers the entire island and is at the correct height.
+   - Run the game
+
+![BrushSettings](images/BrushSettings.PNG "Brush Settings")
+      
+. **Regenerate**  
    - Whenever you re-compile, or if you add an in-editor function call, the mesh can be regenerated to reflect your new parameters.
    - If you’re using a **random seed**, the resulting islands will be consistent for the same seed but different across different seeds.
 
