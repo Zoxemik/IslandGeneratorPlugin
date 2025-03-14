@@ -18,17 +18,19 @@ The goal was to explore **performance**, **usability**, and **capabilities** of 
 4. **Provides Configurable Parameters** via the actor’s Details Panel (e.g., maximum number of islands, island radius range, height, tessellation level).  
 5. **Notifies Other Systems** (e.g., `GameMode`) once generation completes, enabling you to proceed with additional gameplay or rendering logic.
 
-This project was built and tested with **Unreal Engine 5.0.3**, but newer engine versions may require minor modifications to the Geometry Script calls.
-
 ---
 
 ## Using the Code
 
 If you want to explore or adapt this procedural island code in your own project, follow these steps:
 
-1. **Include/Enable Geometry Script**  
-   - In your `.Build.cs` file, add `"GeometryScriptingEditor"`, `"GeometryScriptingCore"`, and `"GeometryCore"` to your `PublicDependencyModuleNames`.
-   - Enable the **Geometry Script** plugin in your project’s Plugin settings.
+1.**Copy and Paste Plugin**
+   - Create folder named **Plugins** in your project.
+   - Move the plugin to that folder.
+     
+2. **Include/Enable Plugin**
+   - In your `.Build.cs` file, add `"IslandGenerator"` to your `PublicDependencyModuleNames`.
+   - Enable the **IslandGenerator** plugin in your project’s settings.
 
 2. **Look at the Actor Class**  
    - Start with [`IslandConstructor.h`](IslandConstructor.h) and [`IslandConstructor.cpp`](IslandConstructor.cpp).
@@ -38,11 +40,11 @@ If you want to explore or adapt this procedural island code in your own project,
    - Choose the number of islands (`MaxNumberOfIslands`), approximate size range (`IslandSize`), height (`IslandHeight`), etc.
    - Adjust the **voxel “solidify”** resolution (`IslandGridResolution`) and **PN tessellation** level (`IslandTessellationLevel`) for performance vs. visual fidelity.
 
+![DetailsPanel](images/DetailsPanel.PNG "Details Panel")
+
 4. **Regenerate**  
    - Whenever you re-compile, or if you add an in-editor function call, the mesh can be regenerated to reflect your new parameters.
    - If you’re using a **random seed**, the resulting islands will be consistent for the same seed but different across different seeds.
-
-*(Optional: Insert a screenshot of your Details Panel here.)*
 
 ---
 
